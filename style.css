@@ -1,0 +1,524 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family:Helvetica,sans-serif;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 5.5rem;
+    overflow-x:hidden;
+}
+body{
+    background-color: #d9d9d9;
+}
+section{
+  padding:30px;
+}
+.btn{/*định dạng nút*/
+ 
+  color:#eef3f1;
+  font-weight: 500;
+  padding:10px;
+  margin:20px;
+  width:100px;
+  font-size: 15px;
+  font-style: italic;
+  display:inline-block;
+  background: #54766a;
+  border-radius: 40px;
+}
+.btn:hover{
+
+
+}
+header{
+    width:100%;
+    height:100px;
+    padding:5px;
+    position:fixed;
+    background:#C4CCC6;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 0 8px rgba(77, 87, 81, 0.5);
+}
+header .logo img {
+    width:220px;
+}
+header .navbar a{
+    color:#444444;
+    padding:15px;
+    font-weight:550;
+}
+header .navbar a:hover{
+    color: white;
+    border-bottom: 3px solid #337153;
+
+}
+header .icon i{
+    cursor:pointer;
+    margin-left:8px;
+    text-align: center;
+    height:30px;
+    line-height: 30px;
+    width:30px;
+    color:#444444;
+    border-radius: 50%;
+    background:#eee;
+ }
+header .icon i:hover{
+    color:#fff;
+    background:#337153;
+ }
+header .icon #menu{
+    display:none;
+}
+
+.trangchu .trangchu-slider .slide {
+  width:100%;
+  padding-top: 70px;
+  height:auto ;
+  margin: 0 auto;
+  position: relative;
+}
+.trangchu .trangchu-slider img {
+   width: 100%;
+  height:auto ;
+}
+.trangchu .trangchu-slider .noidung{
+  position: absolute;/*Đặt phần tử .slider-text với vị trí tuyệt đối trong khung cha (.slider), điều này cho phép chúng ta điều chỉnh vị trí của phần tử theo ý muốn.*/
+  top: 50%;
+  left: 50%; /*Đặt phần tử .slider-text ở giữa theo chiều dọc và ngang bằng cách đặt top và left là 50%. Điều này đưa phần tử vào trung tâm của .slider.*/
+  transform: translate(-50%, -50%); /*Dịch chuyển phần tử .slider-text theo chiều ngang và dọc với giá trị translate(50%, 50%). Điều này giúp căn chỉnh phần tử chính xác vào trung tâm của .slider*/
+  background-color: rgba(203, 203, 206, 0.8);
+  padding: 30px;
+  text-align: center;
+  transition: background-color 0.3s, transform 0.3s; /*Đặt hiệu ứng chuyển đổi khi hover vào phần tử .slider-text.*/
+}
+.trangchu .trangchu-slider .noidung span{
+  color:#ca6e4f;
+  font-size: 25px;
+  
+}
+.trangchu .trangchu-slider .noidung h3{
+  color:#835239;
+  font-size: 30px;
+  padding-top: 10px;
+}
+.trangchu .trangchu-slider .noidung p{
+  color:#3c4c44;
+  font-size: 16px;
+  padding-top: 20px;
+  font-style: italic;
+}
+.trangchu .trangchu-slider .noidung:hover {
+  background-color:rgba(249, 249, 235, 0.8); /*Đặt màu nền của phần tử .slider-text khi hover là màu xám đậm với độ trong suốt 80%.*/
+  transform: translate(-50%, -50%) scale(1.1); /*Dịch chuyển và co giãn phần tử .slider-text khi hover để tạo hiệu ứng phóng to*/
+}
+
+
+.slider-button {
+  color:black;
+  text-decoration: none;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 16px;
+}
+.slider-button:hover{
+  color:#b2c1aa; /*Đặt màu nền của phần tử khi hover*/
+}
+.swiper-pagination-bullet-active{
+  background:#366b40;
+}
+.swiper-pagination{
+  position:relative;
+
+}
+
+
+
+/*San pham ban chay*/
+.headline{
+  text-align: center;
+}
+
+.headline h3{ /*định dạng các tiêu đề h3*/
+  font-size: 24px;
+  color: #111;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  display: inline-block;
+  color: #555;
+  font-weight: 600;
+}
+
+ul.sanpham{ /*định dạng danh sách không có thứ tự có class "sanpham". loại bỏ kiểu danh sách mặc định, làm cho các mục danh sách hiển thị dưới dạng các phần tử flex và sắp xếp chúng thành một hàng với khoảng cách giữa các phần tử.*/
+  list-style: none;
+  display: flex; /*căn chỉnh và xếp chồng các phần tử con bên trong.*/
+  flex-wrap: wrap;/*Xếp chồng các phần tử con thành nhiều hàng khi không đủ không gian ngang để chứa tất cả các phần tử trên cùng một hàng.*/
+  justify-content: space-between;
+}
+.sanpham-item{
+  border: 1px solid #BDBDBD;
+  padding: 10px 0px 0px;
+  margin-bottom: 1.5em;
+
+}
+.sanpham-item:hover {/*định dạng các phần tử có class "sanpham-item" khi được hover. Nó thay đổi viền thành 1 pixel solid #4cf799 và đặt màu nền là #ecffe7.*/
+  border: 1px solid #526d5e;
+  background: #ecffe7;
+}
+ul.sanpham li{/*định dạng các mục danh sách trong danh sách "sanpham"*/
+  flex-basis: 25%;/*mỗi mục chiếm 25% không gian có sẵn*/
+  padding-left: 10px;
+  padding-right: 10px;
+  box-sizing: border-box; /*(bao gồm padding và border trong tổng chiều rộng và chiều cao của phần tử*/
+  margin-bottom: 30px;
+}
+ul.sanpham li img{/*định dạng hình ảnh trong các mục danh sách*/
+  max-width: 200px;
+  padding:10px;
+   -moz-transition: all 0.3s;
+   -webkit-transition: all 0.3s;
+   transition: all 0.3s;/*áp dụng hiệu ứng transition với thời gian 0.3 giây.*/
+}
+ul.sanpham li:hover img {/*định dạng hình ảnh trong các mục danh sách khi được hover. */
+-moz-transform: scale(1.1);
+-webkit-transform: scale(1.1);
+transform: scale(1.1);/* co giãn hình ảnh lên 1.1 lần kích thước ban đầu bằng cách sử dụng thuộc tính transform */
+}
+ul.sanpham li .sanpham-top{
+  position: relative;
+  overflow: hidden; /*ẩn bất kỳ nội dung nào vượt quá phần tử*/
+}
+ul.sanpham li .sanpham-top .sanpham-thumb{
+  display: block;
+}
+ul.sanpham li .sanpham-top .sanpham-thumb img{
+  display: block;
+}
+ul.sanpham li:hover .sanpham-top .sanpham-thumb img{
+  filter: opacity(70%);/*áp dụng một hiệu ứng filter giảm độ mờ của hình ảnh xuống còn 70%*/
+}
+ul.sanpham li .sanpham-top a.mua {
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  background-color: #366b40;
+  color: #fff;
+  padding: 10px 0px;
+  position: absolute;
+  bottom: -40px;
+  width: 100%;
+  transition: 0.25s ease-in-out;/*Áp dụng hiệu ứng chuyển đổi trong thời gian 0.25 giây với chế độ chuyển đổi là "ease-in-out".*/
+  opacity: 0.85; /* Đặt độ mờ (độ trong suốt) của phần tử là 0.85 (85%).*/
+}
+ul.sanpham li:hover a.mua{
+  bottom: 0px; /*khi di chuột vị trí bottom của liên kết "Mua" được đặt thành 0px, hiển thị phần tử ở vị trí ban đầu.*/
+}
+ul.sanpham li .sanpham-info {/*Định dạng thông tin sp*/
+  padding: 10px 10px;
+}
+ul.sanpham li .sanpham-info a{
+  display: block;
+  text-decoration: none;
+}
+ul.sanpham li .sanpham-info a.sanpham-danhmuc{/*Định dạng danh mục sp*/
+  font-size: 11px;
+  text-transform: uppercase;/*Chuyển đổi chữ thành viết hoa.*/
+  color: #9e9e9e;
+  padding: 3px 0px;
+ 
+}
+ul.sanpham li .sanpham-info a.sanpham-name{/*Định dang tên sp*/
+  color: #334862;
+  padding: 3px 0px;
+}
+ul.sanpham li .sanpham-info .sanpham-gia{/*Định dạng giá sp*/
+  color: #111;
+  padding: 3px 0px;
+  font-weight: 600;
+}
+
+.btn span {
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+
+.btn span:after {
+  content: '\00bb'; /*Thiết lập nội dung của phần tử :after là dấu mũi tên chéo (»).*/
+  position: absolute;
+  opacity: 0; /* Thiết lập độ mờ của phần tử là 0, tức là ẩn đi ban đầu.*/
+  top: 0;/*vị trí từ phía trên là 0.*/
+  right: -10px;/*Thiết lập vị trí từ phía bên phải là -10px, tức là ngoài khung hiển thị*/
+  transition: 0.5s;/* hiệu ứng chuyển đổi cho thuộc tính với thời gian 0.5s*/
+  }
+
+
+.btn:hover span { /*Áp dụng khi di chuột hover vào phần tử span bên trong phần tử có lớp "btn".*/
+  padding-right: 25px;
+  }
+
+
+.btn:hover span:after {
+  opacity: 1; /*Thiết lập độ mờ của phần tử là 1, tức là hiển thị phần tử.*/
+  right: 0; /*vị trí từ phía bên phải là 0, tức là nằm trong khung hiển thị.*/
+}
+
+/*Về chúng tôi*/
+.vechungtoi h2{
+  color:#337153;
+  padding-bottom: 30px;
+
+}
+
+.vechungtoi .chungtoi{
+  margin:40px;
+  display:flex;
+  gap: 30px;
+  align-items: center;
+}
+.vechungtoi .chungtoi img{
+ width:300px;
+ height:300px;
+ border-radius: 50%;
+}
+.vechungtoi .chungtoi .noidung{
+  text-align: center;
+  line-height: 25px;
+  color:#555;
+}
+.vechungtoi .chungtoi a{
+  color:#337153;
+  font-weight: 600;
+  border: 1px solid #54766a;
+  padding:10px;
+}
+.vechungtoi .chungtoi a:hover{
+  color:#fff;
+  background-color: #366b40;
+}
+
+/* Uư điểm */
+.uudiem {
+  background-color: #8c9b91;
+}
+.uudiem .uudiem-contain{
+  display:flex;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+
+}
+.uudiem-contain .dacdiem{
+  margin:30px;
+  color:#e8f0ea;
+}
+.uudiem-contain .dacdiem i{
+  font-size: 30px;
+  padding-bottom: 20px;
+}
+.uudiem-contain .dacdiem h4{
+  font-size: large;
+  padding-bottom:10px ;
+}
+.uudiem-contain .dacdiem:hover,
+.uudiem-contain .dacdiem i:hover{
+  color:#fff;
+  transform: scale(1.2)
+}
+
+
+
+
+/*Workshop*/
+.workshop-container {
+  background-image: url(https://i.ytimg.com/vi/74DQq51XbZ8/maxresdefault.jpg);
+  background-repeat: none;/*không lặp lại ảnh nền*/
+  background-position: center;
+  width:100%;
+  height: 400px;
+  background-attachment: fixed; /*giữ ảnh nền cố định khi cuộn trang*/
+}
+.workshop-text {
+  text-align: center;
+  line-height: 2.5;
+  color:#fff;
+  padding: 50px;
+}
+
+.workshop-title {
+  margin: 0;
+font-size: medium;
+}
+
+.workshop-content {
+  margin: 20px 0;
+}
+
+.sign-in-button {
+  color:#366b40;
+  border-color:#D9D9D9;
+  text-decoration: none;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 20px;
+}
+
+.sign-in-button:hover {
+  color: #050505;
+  background-color: rgba(200, 196, 183, 0.6);
+} /*đổi màu chữ, nền chữ khi hover vào phần tử */
+
+
+/*danh gia*/
+.danhgia .tieude1,
+.danhgia .tieude2{
+  text-align: center;
+  line-height: 40px;
+}
+.danhgia .tieude1{
+  color:#337153;
+}
+.danhgia .tieude2{
+  color:#366b40;
+  font-weight:lighter;
+  font-style: italic;
+}
+.danhgia .slide{
+  padding: 32px;
+  box-shadow: #334862;
+  border: 2px solid rgba(0,0,0,.2);
+  border-radius: 16px;
+  background-color: #fff;
+  height: 320px;
+  position:relative;
+}
+ 
+.danhgia .slide .fa-quote-right{
+  position:absolute;
+  top:10px;
+  right:10px;
+  font-size: 30px;
+  color:#555;
+}
+.danhgia .slide .khach{
+  display:flex;
+  gap:30px;
+  align-items: center;
+  padding-bottom: 30px;;
+}
+.danhgia .slide .khach img{
+  height:70px;
+  width:70px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.danhgia .slide .khach .ngay{
+  font-size: 10px;
+  font-weight:lighter;
+  font-style: italic;
+  padding-bottom: 8px;
+}
+.danhgia .slide .khach h4{
+  color:#444444;
+  padding-bottom: 8px;
+}
+.danhgia .slide .khach i{
+  color:#337153;
+}
+.danhgia .slide p{
+  line-height:20px;
+  color:#526d5e;
+}
+
+/*footer*/
+footer {
+    background-color: #8C9B8F;
+    color: #eee;
+    height:max-content;
+    line-height: 25px;
+  }
+footer .container{
+  display:grid;
+  grid-template-columns: 35% 15% 25% 25%;
+  grid-template-rows: 100px 200px;
+  margin:10px;
+  padding-top: 10px;
+}
+footer .container .social{
+  grid-column-start:3 ;
+  grid-column-end:4;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+footer .container .social i{
+  padding:10px;
+  font-size: 20px;
+}
+footer .container .dangky{
+  grid-column-start: 4;
+  grid-column-end:5;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+footer .container .copyright{
+  grid-column:1/6;
+  color:#000000;
+  text-align: center;
+}
+footer .thongtin li{
+  line-height: 45px;
+}
+
+footer .container h3{
+    color:#fff;
+    margin-bottom:10px;
+}
+footer ul{
+  list-style: none;
+}
+footer a {
+  color: #eee;
+  transition: 0.3s color, 0.3s transform;
+}
+
+footer a:hover {
+  transform: scale(1);
+  filter: brightness(150%);
+  color: #0e0f0e;
+  text-decoration: underline;
+}
+footer input[type="email"] {
+  background-color: #e8f0ea;
+  border: 1px solid #e8f0ea;
+  color: #626262;
+  box-sizing: border-box;
+  height: 40px;
+  padding-left: 12px;
+}
+footer button{
+  background-color:#444444;
+    border: 1px solid #444444;
+    color: #fff;
+    cursor: pointer;
+    height: 40px;
+    min-width: 60px;
+    padding: 11px 10px;
+    text-align: center;
+    transition: 0.3s background-color;
+  }
+footer button:hover{
+  background-color:#e8f0ea;
+  color:#444444;
+}
+footer .dangky p{
+  font-style: italic;
+  padding-top:10px;
+}
