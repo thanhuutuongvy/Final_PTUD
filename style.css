@@ -11,7 +11,7 @@ html{
     overflow-x:hidden;
 }
 body{
-    background-color: #d9d9d9;
+    background-color: #a51a1a;
 }
 section{
   padding:30px;
@@ -54,7 +54,7 @@ header .navbar a{
     font-weight:550;
 }
 header .navbar a:hover{
-    color: white;
+    color: rgb(255, 255, 255);
     border-bottom: 3px solid #337153;
 
 }
